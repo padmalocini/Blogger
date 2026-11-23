@@ -1,0 +1,38 @@
+
+# -------------------------------------------
+# MODELS
+# -------------------------------------------
+models:
+  planner_agent_model: gemini-3.6         # Kept for future reuse — not wired into the current graph
+
+# -------------------------------------------
+# INPUTS
+# -------------------------------------------
+
+blog_settings:
+  "topic": "Best CRM software for startups"
+  "initial_keywords": ["best crm for startups", "crm software comparison"]
+  "goal": "Help early-stage teams compare CRM tools"
+  "format": "listicle"
+  "tone": "professional"
+  "target_audience": "Startup founders choosing their first CRM"
+  "content_depth": "detailed"
+  "generate_topic_variations": false
+  "geo_zone": "india"
+  "funnel_stage": "consideration"
+  "business_objective": "leads"
+  "user_override": false
+  "retry_count": 0
+
+
+  # --- Researcher ---
+  keyword_researcher: "google_ads"   # google_ads | rapidapi
+
+
+# -------------------------------------------
+# LOGS
+# -------------------------------------------
+
+logger:
+  default_name: blog_writter
+  log_dir_name: logs

@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+BL_env/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Generated outputs and logs
+output/
+logs/
+intent_result.json
+
+# Local-only files
+keyword_evaluation.py
+config.json
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store

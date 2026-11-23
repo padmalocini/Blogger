@@ -2,7 +2,6 @@
 # Principles Applied: Single Responsibility, Interface Segregation, Protocol Stdio Safety, Audit Logging Isolation
 
 import os
-import re
 import sys
 import math
 import json

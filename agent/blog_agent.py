@@ -6,31 +6,29 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from typing import Dict, Any, Optional
 
-
 # ------- LangGraph imports -------
 from langgraph.graph import StateGraph, END
-
+from dotenv import load_dotenv
 
 # -------------------------------------------
 # Agent Working Modules imports
 # -------------------------------------------
-from .prompts import PromptTemplates                    # kept for future reuse; NOT called here
+from .prompts import PromptTemplates
 from .agent_tools.schema import BlogResearchState
+from configure.config_loader import load_config
+from configure.logger import setup_logger
 
-# Prepare prompt templates (kept available but unwired from this graph)
 prompt_gen = PromptTemplates()
-
 
 # -------------------------------------------
 # Setup logging
 # -------------------------------------------
-
-from configure.config_loader import load_config
-from configure.logger import setup_logger
-from dotenv import load_dotenv
 load_dotenv()
 CONFIG = load_config()
 logger = setup_logger(name="blog_writter", tag="BLOG_AGENT")
+
+
+
 
 
 # -------------------------------------------
